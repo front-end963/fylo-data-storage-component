@@ -1,0 +1,208 @@
+/* starting mobile design first to load faster on mobile devices */
+
+/* using selectors for less need of ids and classes */
+
+:root {
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --PaleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%);
+    --VeryDarkBlue: hsl(229, 57%, 11%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+svg {
+    display: none;
+}
+
+body {
+    font-size: 0.875rem;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./images/bg-mobile.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 30px 0 30px;
+}
+
+main div:nth-of-type(1), main div:nth-of-type(2){
+    background-color: var(--DarkBlue);
+}
+
+main div:nth-of-type(1) {
+    width: 100%;
+    height: 170px;
+    border-radius: 10px 60px 10px 10px;
+}
+
+#logo {
+    margin-bottom: 20px;
+}
+
+div:nth-of-type(1) span:nth-of-type(1) {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div:nth-of-type(1) span:nth-of-type(1) span:nth-of-type(1) {
+    background-color: var(--VeryDarkBlue);
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+}
+
+.icons img {
+    width: 25px;
+    height: 25px;
+}
+
+.icons {
+    width: 40px;
+    height: 40px;
+    background-color: var(--VeryDarkBlue);
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+main div:nth-of-type(2) {
+    margin-top: 15px;
+    width: 100%;
+    height: 140px;
+    border-radius: 10px;
+}
+
+#space-left {
+    background-color: white;
+    width: 45%;
+    height: 70px;
+    position: absolute;
+    top: 70%;
+    right: 28%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#space-left span:nth-of-type(1) {
+    font-size: 1.875rem;
+    color: black;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+#space-left span:nth-of-type(2) {
+    font-size: 0.75rem;
+    color: var(--GrayishBlue);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+p span, div:nth-of-type(2) span:nth-of-type(2), div:nth-of-type(2) span:nth-of-type(3) {
+    font-size: 0.875rem;
+    color: var(--PaleBlue);
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+div:nth-of-type(2) span:nth-of-type(3) {
+    align-self: flex-end;
+    margin-top: -20px;
+}
+
+#bar-size {
+    width: 100%;
+    height: 15px;
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 50px;
+}
+
+#bar {
+    display: block;
+    width: 80%;
+    height: 12px;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    margin-left: 2px;
+    border-radius: 50px;
+}
+
+#bar-loading {
+    display: block;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 1px 0 1px 96%;
+}
+
+p {
+    color: var(--PaleBlue);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* desktop design */
+
+@media screen and (min-width: 376px) {
+
+    body {
+        background: url(./images/bg-desktop.png) no-repeat bottom;
+        background-size: 100% 50%;
+        background-color: var(--VeryDarkBlue);
+    }
+    
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    #space-left {
+        width: 170px;
+        padding: 20px;
+        top: 38%;
+        right: 25%;
+    }
+
+    main div:nth-of-type(1) {
+        width: 500px;
+        margin-right: 50px;
+    }
+
+    #space-left span:nth-of-type(1) {
+        font-size: 2.5rem;
+    }
+
+    svg {
+        display: block;
+        position: absolute;
+        top: 43%;
+        right: 6.25%;
+    }
+    
+}

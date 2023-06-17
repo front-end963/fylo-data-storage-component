@@ -1,7 +1,5 @@
 /* starting mobile design first to load faster on mobile devices */
 
-/* using selectors for less need of ids and classes */
-
 :root {
     --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
     --PaleBlue: hsl(243, 100%, 93%);
@@ -31,138 +29,135 @@ body {
     background-size: 100% 100%;
 }
 
-div {
+main {
+    width: min(300px, 75%);
+    display: flex;
+    flex-direction: column;
+}
+
+#fylo, #bar {
+    background-color: var(--DarkBlue);
+}
+
+#fylo {
+    width: 100%;
+    height: 170px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 30px 0 30px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-top-right-radius: 70px;
 }
 
-main div:nth-of-type(1), main div:nth-of-type(2){
-    background-color: var(--DarkBlue);
-}
-
-main div:nth-of-type(1) {
-    width: 100%;
-    height: 170px;
-    border-radius: 10px 60px 10px 10px;
-}
-
-#logo {
+#fylo img:nth-child(1) {
+    width: 110px;
+    height: 35px;
     margin-bottom: 20px;
 }
 
-div:nth-of-type(1) span:nth-of-type(1) {
-    width: 200px;
-    height: 50px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+#fylo div:nth-child(2) span img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 0px;
 }
 
-div:nth-of-type(1) span:nth-of-type(1) span:nth-of-type(1) {
-    background-color: var(--VeryDarkBlue);
+#fylo div:nth-child(2) {
+    display: flex;
+}
+
+#fylo div:nth-child(2) span {
     width: 40px;
     height: 40px;
+    border-radius: 10px;
+    display: flex;
     justify-content: center;
-}
-
-.icons img {
-    width: 25px;
-    height: 25px;
-}
-
-.icons {
-    width: 40px;
-    height: 40px;
+    align-items: center;
     background-color: var(--VeryDarkBlue);
+}
+
+#fylo div:nth-child(2) span:nth-child(1), span:nth-child(2) {
     margin-right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-
-main div:nth-of-type(2) {
-    margin-top: 15px;
-    width: 100%;
-    height: 140px;
-    border-radius: 10px;
-}
-
-#space-left {
-    background-color: white;
-    width: 45%;
-    height: 70px;
-    position: absolute;
-    top: 70%;
-    right: 28%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-
-#space-left span:nth-of-type(1) {
-    font-size: 1.875rem;
-    color: black;
-    font-weight: 700;
-    margin-right: 10px;
-}
-
-#space-left span:nth-of-type(2) {
-    font-size: 0.75rem;
-    color: var(--GrayishBlue);
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-p span, div:nth-of-type(2) span:nth-of-type(2), div:nth-of-type(2) span:nth-of-type(3) {
-    font-size: 0.875rem;
-    color: var(--PaleBlue);
-    font-weight: 700;
-    margin-top: 10px;
-}
-
-div:nth-of-type(2) span:nth-of-type(3) {
-    align-self: flex-end;
-    margin-top: -20px;
-}
-
-#bar-size {
-    width: 100%;
-    height: 15px;
-    background-color: var(--VeryDarkBlue);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 50px;
 }
 
 #bar {
-    display: block;
-    width: 80%;
-    height: 12px;
-    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
-    margin-left: 2px;
-    border-radius: 50px;
-}
-
-#bar-loading {
-    display: block;
-    background-color: white;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 1px 0 1px 96%;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 25px;
+    position: relative;
 }
 
 p {
-    color: var(--PaleBlue);
+    color: hsla(243, 100%, 93%, 0.781);
+    font-size: 0.813rem;
     font-weight: 400;
-    margin-bottom: 10px;
+    text-align: center;
+}
+
+strong {
+    color: var(--PaleBlue);
+    font-size: 0.75rem;
+}
+
+#bar div:nth-child(2) {
+    width: 100%;
+    height: 17px;
+    border-radius: 50px;
+    background-color: var(--VeryDarkBlue);
+    padding: 2px;
+    margin: 15px 0 10px 0;
+}
+
+#bar div:nth-child(2) span {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: inherit;
+    background-image: linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+#bar div:nth-child(2) span span {
+    width: 10px;
+    height: 10px;
+    margin-right: 2px;
+    margin-top: 1px;
+    border-radius: inherit;
+    background-image: linear-gradient(to right, white, white);
+}
+
+#bar span strong:nth-child(2) {
+    margin-left: 65%;
+}
+
+#bar div:nth-child(4) {
+    background-color: white;
+    width: 160px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    align-self: center;
+    position: absolute;
+    top: 75%;
+}
+
+h1 {
+    font-size: 2.188rem;
+}
+
+h2 {
+    font-size: 0.813rem;
+    color: var(--GrayishBlue);
+    text-transform: uppercase;
+    margin-left: 10px;
 }
 
 /* desktop design */
@@ -174,35 +169,43 @@ p {
         background-size: 100% 50%;
         background-color: var(--VeryDarkBlue);
     }
-    
+
     main {
-        display: flex;
+        width: 50%;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: flex-end;
     }
 
-    #space-left {
-        width: 170px;
-        padding: 20px;
-        top: 38%;
-        right: 25%;
+    #fylo {
+        margin-bottom: 0;
+        width: 60%;
     }
 
-    main div:nth-of-type(1) {
-        width: 500px;
-        margin-right: 50px;
+    #bar {
+        margin-left: 20px;
+        width: 100%;
+        padding: 35px;
     }
 
-    #space-left span:nth-of-type(1) {
-        font-size: 2.5rem;
+    #bar span strong:nth-child(2) {
+        margin-left: 80%;
+    }
+
+    #bar div:nth-child(4) {
+        top: -30%;
+        right: 7%;
+    }
+    
+    p {
+        text-align: start;
     }
 
     svg {
-        display: block;
+        display: inline;
         position: absolute;
-        top: 43%;
-        right: 6.25%;
+        top: 55%;
+        right: -187.5%;
     }
-    
+
 }
